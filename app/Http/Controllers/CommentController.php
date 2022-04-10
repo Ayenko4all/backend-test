@@ -18,7 +18,7 @@ class CommentController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function store(StoreComment $request, User $user): \Illuminate\Http\JsonResponse
-    {//dd($user);
+    {
         $comment = Comment::create(['body' => $request->body, 'user_id' => $user->id]);
 
         CommentWritten::dispatch($comment);
