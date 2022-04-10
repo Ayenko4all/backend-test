@@ -6,6 +6,7 @@ Clone the project from github repo
 -   Create a database in MySQL and enter its credentials in the .env file
 -   Install composer packages using `composer install`.
 -   Migrate the database using `php artisan migrate`.
+-   Seed database using `php artisan db:seed`.
 -   Start Php's inbuilt server using php artisan serve.
 
 ## Controllers
