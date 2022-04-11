@@ -16,7 +16,12 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
+Route::get('/', function () {
+    return response()->json([
+        'status' => 'success',
+        'data'   => ['message' => 'Welcome to the User Achievement API'],
+    ]);
+})->name('index');
 Route::post('comments/{user}', [CommentController::class, 'store'])->name('comment.store');
 Route::get('/users/{user}/achievements', AchievementsController::class)->name('user.achievements');
 Route::post('lessons/{lesson}/{user}',LessonController::class)->name('lesson.watched');
